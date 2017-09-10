@@ -166,7 +166,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void readCookies(String url) {
         try {
             CookieManager cookieManager = CookieManager.getInstance();
-            String cookieStr = cookieManager.getCookie(".elong.com");
+            // url 为域名
+            String cookieStr = cookieManager.getCookie(url);
 
             tv.setText(cookieStr);
 
